@@ -121,6 +121,6 @@ jobs:
       uses: peter-evans/repository-dispatch@v1
       with:
         token: ${{ secrets.REPO_ACCESS_TOKEN }}
-        repository: username/kai-tutorial-pipeline
+        repository: superkookai/kai-tutorial-pipeline
         event-type: kai-tutorial-backend-cd-dev
         client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
