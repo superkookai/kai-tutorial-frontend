@@ -97,7 +97,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: dev
-      url: https://github.com/superkookai/kai-tutorial-pipeline/actions/workflows/dev-tutorial-backend-deploy.yml
+      url: https://github.com/superkookai/kai-tutorial-pipeline/actions/workflows/dev-tutorial-frontend-deploy.yml
     needs: [unitest,analyze] # if on env sit don't use
     
     steps:
@@ -122,5 +122,5 @@ jobs:
       with:
         token: ${{ secrets.REPO_ACCESS_TOKEN }}
         repository: superkookai/kai-tutorial-pipeline
-        event-type: kai-tutorial-backend-cd-dev
+        event-type: kai-tutorial-frontend-cd-dev
         client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
